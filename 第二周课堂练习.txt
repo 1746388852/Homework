@@ -1,0 +1,64 @@
+1、'hello,world'.replace('l','*')
+
+2、'Good'.lower()
+
+3、'Fh1goWe92QbvC'.lower()
+
+'Fh1goWe92QbvC'.upper()
+
+4、nums = []
+for c in 'Fh1goWe92QbvC':
+	if c.isdigit():
+		nums.append(c)
+print(''.join(nums))
+5、lst = [2,0,3,6,9]
+sorted(lst)
+
+6、li = [2,3,1,2,4,3]
+set = set(li)
+li = list(set)
+print(li)
+7、string = 'aasdebbcaa'
+d_counter = {}
+for c in set(string):
+	d_counter[c] = string.count(c)
+d_counter
+8、def str_number(str_num):
+     count = 0
+     count2 = 0
+     count3 = 0
+     count4 = 0
+     for i in str_num:
+             if i.isdigit() == True:
+                     count += 1
+             elif i.isalpha() == True:
+                     count2 += 1
+             elif i.isspace() == True:
+                     count3 += 1
+             else:
+                     count4 += 1
+     print("数字有%d个"%count)
+     print("字母有%d个"%count2)
+     print("空格有%d个"%count3)
+     print("其他有%d个"%count4)
+     return
+
+str_num = input("输入:")
+输入:46687654          ghjgytuguv      4545juiki
+str_number(str_num)
+9、def remove_spaces(string):
+	return ''.join([s for s in string if not s.isspace()])
+10、def guess_number():
+	import random
+	result = random.randint(0,100)
+	guess_times = 5
+	while guess_times > 0:
+		guess = int(input('请输入一个数: '))
+		if result == guess:
+			print("恭喜你猜对了")
+			break
+		elif result > guess:
+			print("很遗憾，你猜小了")
+		elif result < guess:
+			print("很遗憾，你猜大了")
+		guess_times -= 1
