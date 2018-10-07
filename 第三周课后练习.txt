@@ -1,0 +1,52 @@
+1、 def passwd_gen(p_len, lower_case=True, upper_case=True, number=True, special_char=True):
+     import string, random
+     lower_case_set = set(list(string, ascii_lowercase))
+     upper_case_set = set(list(string, ascii_uppercase))
+     number_set = set([x for x in range(10)])
+     special_char_set = set(list('~!@#$%^&*()'))
+     user_choice = set()
+     if lower_case:
+             user_choice = user_choice | lower_case_set
+     if upper_case:
+             user_choice = user_choice | upper_case_set
+     if number:
+             user_choice = user_choice | number_set
+     if special_char:
+             user_choice = user_choice | special_char_set
+     passed_lst = random.sample(user_choice, p_len)
+     return ''.join(passwd_lst)
+2、 def check_existence_of_number(lst, number):
+     try:
+             idx = lst.index(number)
+             if idx <= len(lst) // 2:
+                     return 'left'
+             else:
+                     return 'right'
+     except ValueError:
+             return False
+3、 def is_prime(n):
+     if n == 1:
+             return False
+     elif n == 2:
+             return True
+     else:
+             for x in range(2,n):
+                     if not n % x:
+                             return False
+             return True
+4、 x, y = 10, 5
+ def add(x, y):
+     return x + y
+
+
+ def sub(x, y):
+     return x - y
+
+
+ def mul(x, y):
+     return x * y
+
+ def div(x, y):
+     return x / y
+
+

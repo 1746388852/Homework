@@ -1,0 +1,59 @@
+1、 def get_year_of_num():
+     name = input('请输入您的名字:')
+     age = int(input('请输入您当前的年龄:'))
+     which_year = 100+2018-age
+     print(f'{name}在{which_year}年为100岁')
+     return which_year
+
+ 
+2、def is_odd_or_even():
+     number = int(input("请输入一个整数: "))
+     if number % 2 == 1 :
+             print("您输入的是奇数")
+     else:
+             print("您输入的是偶数")
+
+
+3、（1）def has_null_value(lst):
+     flag = True
+     for x in lst:
+             if not bool(x):
+                     break
+     else:
+             flag = False
+     return flag
+
+（2） def  has_null_value(lst):
+     return list(filter(None,lst)) == lst
+
+（3） def has_null_value(lst):
+     return all(lst)
+4、 def square(lst):
+     return [x ** 2 for x in lst]
+
+ square([2, 3, 4])
+5、 def my_sum(lst):
+     from functools import reduce
+     return reduce(lambda x, y: x+y, lst)
+
+6、 def triple(lst):
+     return [x ** 3 for x in lst]
+
+7、 def elements_in_common(m, n):
+     s = set(m) & set(n)
+     return list(s)
+8、 （1）def max_in_three(x, y, z):
+     if x>y:
+             if x>z:
+                     return x
+             else:
+                     return z
+     else:
+             if y>z:
+                     return y
+             else:
+                     return z
+
+（2） def max_in_three(x, y, z):
+     from functools import reduce
+     return reduce(lambda x, y: x if x>y else y, (x, y, z))
