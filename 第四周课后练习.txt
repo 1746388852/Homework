@@ -1,0 +1,49 @@
+1、class Animal:
+     def __init__(self, name):
+             self.name = name
+     def call(self):
+             print('I am Animal' , self.name)
+
+ class Dog(Animal):
+     def call(self):
+             print('汪汪', self.name)
+
+ class Cat(Animal):
+     def call(self):
+             print('喵喵', self.name)
+
+ if __name__ == '__main__':
+     animal = Animal('animal')
+     animal.call()
+     cat = Cat('meow')
+     cat.call()
+     dog = Dog('puppy')
+     dog.call()
+
+2、 def fib_number(n):
+     if n==0 or n==1:
+             return 1
+     return fib_number(n-2) + fib_number(n-1)
+
+ def fib(n):
+     result = []
+     for i in range(n):
+             value = fib_number(i)
+             if value>n:
+                     break
+             result.append(value)
+     return result
+
+ if __name__ == '__main__':
+     print(fib(10))
+
+3、 odd_nums = [x for x in range(100) if x % 2]
+
+4、 def add(x,y):
+     try:
+             x,y = float(x), float(y)
+     except ValueError:
+             print('非法的输入参数!')
+             x,y = 0,0
+     finally:
+             return x+y
